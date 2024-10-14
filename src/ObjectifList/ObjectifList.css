@@ -1,0 +1,54 @@
+/* Style global pour la liste des objectifs */
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+/* Style pour chaque élément de la liste */
+.objectifItem {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #f0f0f0;
+	padding: 10px;
+	margin: 10px 0;
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style du texte de l'objectif */
+.objectifItem span {
+	font-size: 18px;
+	color: #333;
+}
+
+/* Style pour le bouton "supprimer" */
+.objectifItem button {
+	background-color: #ff4d4d;
+	border: none;
+	color: white;
+	padding: 5px 10px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.objectifItem button:hover {
+	background-color: #ff1a1a;
+}
+
+/* Ajout d'une animation légère sur les éléments de la liste */
+.objectifItem {
+	animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

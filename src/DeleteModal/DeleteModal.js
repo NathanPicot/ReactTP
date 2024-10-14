@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import ModalContent from './ModalContent.js';
+import DeleteModalContent from './DeleteModalContent.js';
 
 export default function NoPortalExample({ onConfirm }) {
     const [showModal, setShowModal] = useState(false);
@@ -10,7 +10,7 @@ export default function NoPortalExample({ onConfirm }) {
                 X
             </button>
             {showModal && (
-                <ModalContent
+                <DeleteModalContent
                     onClose={() => setShowModal(false)}
                     onConfirm={onConfirm}  // Passer la fonction onConfirm ici
                 />

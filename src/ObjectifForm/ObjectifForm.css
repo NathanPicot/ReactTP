@@ -1,0 +1,43 @@
+/* Style global pour le formulaire */
+form {
+	display: flex; /* Utilise le flexbox pour aligner les éléments */
+	align-items: center; /* Centre verticalement les éléments */
+	margin: 20px 0; /* Ajoute de l'espace autour du formulaire */
+}
+
+/* Style pour le champ de texte */
+input {
+	flex: 1; /* Permet au champ d'occuper tout l'espace disponible */
+	padding: 10px; /* Ajoute du padding pour le confort de saisie */
+	border: 1px solid #ccc; /* Bordure grise */
+	border-radius: 4px; /* Coins arrondis */
+	font-size: 16px; /* Augmente la taille de la police */
+	margin-right: 10px; /* Espace entre le champ et le bouton */
+	transition: border-color 0.3s ease; /* Animation pour le changement de couleur de la bordure */
+}
+
+input:focus {
+	border-color: #007bff; /* Change la couleur de la bordure lorsque le champ est focalisé */
+	outline: none; /* Enlève le contour par défaut */
+}
+
+/* Style pour le bouton */
+button {
+	background-color: #28a745; /* Couleur de fond verte */
+	border: none; /* Enlève la bordure par défaut */
+	color: white; /* Couleur du texte */
+	padding: 10px 15px; /* Espace intérieur */
+	border-radius: 4px; /* Coins arrondis */
+	cursor: pointer; /* Change le curseur sur hover */
+	font-size: 16px; /* Augmente la taille de la police */
+	transition: background-color 0.3s ease; /* Animation pour le changement de couleur de fond */
+}
+
+button:hover {
+	background-color: #218838; /* Change la couleur de fond au survol */
+}
+
+button:disabled {
+	background-color: #6c757d; /* Couleur de fond pour les boutons désactivés */
+	cursor: not-allowed; /* Curseur pour indiquer que l'action est désactivée */
+}

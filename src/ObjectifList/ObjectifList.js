@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import Modal from './Modal';
+import DeleteModal from '../DeleteModal/DeleteModal';
+import './ObjectifList.css'
 
 function ObjectifList({ objectif, removeObj }) {
     const [selectedObj, setSelectedObj] = useState(null);
@@ -16,13 +17,12 @@ function ObjectifList({ objectif, removeObj }) {
     return (
         <ul>
             {objectif.map((obj, index) => (
-                <li key={index}>
-                    {obj}
-
-                    <Modal onClose={() => setShowModal(false)} onConfirm={() => confirmDelete(obj)} />
+                <li key={index} className="objectifItem">
+                    <span>{obj}</span>
+                    <DeleteModal onClose={() => setShowModal(false)} onConfirm={() => confirmDelete(obj)} />
                 </li>
-            ))}
 
+            ))}
         </ul>
     );
 }

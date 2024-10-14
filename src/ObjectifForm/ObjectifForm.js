@@ -1,4 +1,5 @@
-import {useState} from "react";
+import { useState } from "react";
+import './ObjectifForm.css'; // Importation du fichier CSS
 
 function ObjectifForm({ addObjectif }) {
     const [newObjectif, setNewObjectif] = useState("");
