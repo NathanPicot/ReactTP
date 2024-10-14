@@ -18,8 +18,6 @@ function App() {
 
   const removeObj = (remove) => {
     setObjectif(objectif.filter(objectif => objectif !== remove))
-    console.log(objectif);
-    console.log(remove);
   }
 
   return (
