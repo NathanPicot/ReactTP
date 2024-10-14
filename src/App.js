@@ -4,6 +4,7 @@ import {useState} from "react";
 import ObjectifForm from './ObjectifForm';
 import ObjectifList from './ObjectifList';
 
+
 function App() {
   const [objectif, setObjectif] = useState([]);
 
@@ -33,6 +34,8 @@ function App() {
             Learn React
           </a>
           <br/>
+          Ajout des objectifs :
+
           {/* Formulaire d'ajout d'objectif */}
           <ObjectifForm addObjectif={addObjectif} />
 
