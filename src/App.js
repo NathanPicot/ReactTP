@@ -1,61 +1,45 @@
 import logo from './logo.svg';
 import './App.css';
 import {useState} from "react";
-
-
+import ObjectifForm from './ObjectifForm';
+import ObjectifList from './ObjectifList';
 
 function App() {
-  const [objectif, setObjectif] = useState([])
-  const [newObjectif, setNewObjectif] = useState("");
+  const [objectif, setObjectif] = useState([]);
 
-  const addObjectif = (e) => {
-    e.preventDefault();
+  const addObjectif = (newObjectif) => {
     if (newObjectif) {
       setObjectif([...objectif, newObjectif]);
-      setNewObjectif("");
     }
   };
 
   const removeObj = (remove) => {
-    setObjectif(objectif.filter(objectif => objectif !== remove))
+    setObjectif(objectif.filter(objectif => objectif !== remove));
   }
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo"/>
-        <p>
-          Edit <code className="App-text">src/App.js</code> and save to reload.
-        </p>
-        <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <br/>
-        <form onSubmit={addObjectif}>
-          <input
-              name="objectif"
-              placeholder="Add"
-              value={newObjectif}
-              onChange={(e) => setNewObjectif(e.target.value)} // Met à jour l'input
-          />
-          <button type="submit">Adds</button>
-        </form>
-        <ul>
-          {objectif.map((obj, index) => (
-              <li key={index}>{obj}
-                <button onClick={() => removeObj(obj)}>X</button>
-              </li>
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo"/>
+          <p>
+            Edit <code className="App-text">src/App.js</code> and save to reload.
+          </p>
+          <a
+              className="App-link"
+              href="https://reactjs.org"
+              target="_blank"
+              rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+          <br/>
+          {/* Formulaire d'ajout d'objectif */}
+          <ObjectifForm addObjectif={addObjectif} />
 
-          ))}
-
-        </ul>
-      </header>
-    </div>
+          {/* Liste des objectifs */}
+          <ObjectifList objectif={objectif} removeObj={removeObj} />
+        </header>
+      </div>
   );
 }
 
