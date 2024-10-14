@@ -45,7 +45,7 @@ function App() {
               value={newObjectif}
               onChange={(e) => setNewObjectif(e.target.value)} // Met à jour l'input
           />
-          <button type="submit">Add</button>
+          <button type="submit">Adds</button>
         </form>
         <ul>
           {objectif.map((obj, index) => (
