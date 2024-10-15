@@ -28,6 +28,19 @@ function App() {
     setObjectif(objectif.filter(objectif => objectif !== remove));
   }
 
+  const editObj = (obj, newObj) => {
+    // Trouver l'index de l'objectif à modifier
+    let index = objectif.indexOf(obj);
+
+    // Si l'objectif est trouvé (index non négatif)
+    if (index !== -1) {
+      // Créer une nouvelle copie du tableau avec la modification
+      let updatedObjectifs = [...objectif];
+      updatedObjectifs[index] = newObj; // Remplacer l'ancien objectif par le nouveau
+      setObjectif(updatedObjectifs); // Mettre à jour le state avec le tableau modifié
+    }
+  };
+
   return (
       <div className="App">
         <header className="App-header">
@@ -50,7 +63,7 @@ function App() {
           <ObjectifForm addObjectif={addObjectif} />
 
           {/* Liste des objectifs */}
-          <ObjectifList objectif={objectif} removeObj={removeObj} />
+          <ObjectifList objectif={objectif} removeObj={removeObj} editObj={editObj} />
         </header>
       </div>
   );
