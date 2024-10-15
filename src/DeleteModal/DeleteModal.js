@@ -6,7 +6,7 @@ export default function NoPortalExample({ onConfirm }) {
 
     return (
         <>
-            <button onClick={() => setShowModal(true)}>
+            <button className="delete" onClick={() => setShowModal(true)}>
                 X
             </button>
             {showModal && (

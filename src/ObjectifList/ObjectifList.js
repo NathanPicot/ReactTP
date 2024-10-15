@@ -31,8 +31,11 @@ function ObjectifList({ objectif, removeObj, editObj }) {
                 <li key={index} className="objectifItem">
 
                     <span>{obj}</span>
-                    <DeleteModal onClose={() => setShowModal(false)} onConfirm={() => confirmDelete(obj)} />
-                    <EditModal value={obj} newValue={newValue} setNewValue={setNewValue} onClose={() => setShowModal(false)} onConfirm={() => confirmEdit(obj, newValue)} />
+                    <div className="button-container">
+                        <EditModal value={obj} newValue={newValue} setNewValue={setNewValue}
+                                   onClose={() => setShowModal(false)} onConfirm={() => confirmEdit(obj, newValue)}/>
+                        <DeleteModal onClose={() => setShowModal(false)} onConfirm={() => confirmDelete(obj)}/>
+                    </div>
                 </li>
 
             ))}
