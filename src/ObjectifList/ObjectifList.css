@@ -20,6 +20,7 @@ ul {
 .objectifItem span {
 	font-size: 18px;
 	color: #333;
+	padding-right: 30px;
 }
 
 /* Conteneur pour les boutons d'action (édition/suppression) */

@@ -4,6 +4,9 @@ import './ObjectifForm.css'; // Importation du fichier CSS
 function ObjectifForm({ addObjectif }) {
     const [newObjectif, setNewObjectif] = useState("");
 
+    /*
+    *  Gestion de l'ajout d'un objectif
+    */
     const handleSubmit = (e) => {
         e.preventDefault();
         addObjectif(newObjectif);

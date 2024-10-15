@@ -10,7 +10,7 @@ export default function ModalContent({ onClose, onConfirm }) {
                     onConfirm();
                     onClose();
                 }}>Oui</button>
-                <button onClick={onClose}>Annuler</button>
+                <button className='delete' onClick={onClose}>Annuler</button>
             </div>
         </div>
     );

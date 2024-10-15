@@ -10,13 +10,18 @@ function ObjectifList({ objectif, removeObj, editObj }) {
 
 
 
-
+    /*
+    *  Fonction de supréssion d'objectif
+    */
     const confirmDelete = (obj) => {
         removeObj(obj); // Supprime l'objectif
         setShowModal(false);    // Ferme la modal
         setSelectedObj(null);   // Réinitialise l'objectif sélectionné
     };
 
+    /*
+    *  Fonction d edition d'objectif
+    */
     const confirmEdit = (obj, newValue) => {
         console.log("newValue => ",newValue , "obj =>", obj);
         editObj(obj, newValue);

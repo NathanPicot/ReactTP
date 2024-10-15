@@ -6,6 +6,9 @@ import ObjectifList from './ObjectifList/ObjectifList';
 
 
 function App() {
+  /*
+    *  Liste des objectifs
+    */
   const [objectif, setObjectif] = useState(["Faire les courses",
     "Aller à la salle de sport 3 fois par semaine",
     "Monter à plus de 5000m d altitude",
@@ -18,16 +21,25 @@ function App() {
     "Faire un triathlon",
   ]);
 
+  /*
+    *  Fonction d'ajout d'objectif
+    */
   const addObjectif = (newObjectif) => {
     if (newObjectif) {
       setObjectif([...objectif, newObjectif]);
     }
   };
 
+  /*
+    *  Fonction de supréssion d'objectif
+    */
   const removeObj = (remove) => {
     setObjectif(objectif.filter(objectif => objectif !== remove));
   }
 
+  /*
+    *  Fonction d edition d'objectif
+    */
   const editObj = (obj, newObj) => {
     // Trouver l'index de l'objectif à modifier
     let index = objectif.indexOf(obj);
